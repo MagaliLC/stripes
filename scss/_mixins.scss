@@ -1,0 +1,37 @@
+@mixin backgroundColor($start, $color-divs) {
+    @for $i from $start through length($color-divs) {
+        #block#{$i} {
+            background-color: nth($color-divs, $i);
+        }
+    }
+}
+
+@mixin colMargin($start, $end) {
+    @for $i from $start through $end {
+        #block#{$i} {
+            margin-left: 3px;
+        }
+    }
+}
+
+@mixin blockAnimation( $start, $translates, $animations) {
+    @for $i from $start through length($translates) {
+        #block#{$i} {
+            animation: nth($animations, $i) ease-in-out 0.8s;
+            @include animationKeyframe($animation-name: nth($animations, $i), $translate: nth($translates, $i));
+        }
+    }
+}
+
+@mixin animationKeyframe($animation-name, $translate) {
+    @keyframes #{$animation-name} {
+        0% {
+            -webkit-transform: $translate;
+            transform: $translate;
+        }
+        100% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

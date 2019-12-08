@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap');
+$white: #fff;
+$blue: #244F75;
+$light-blue: #60BFBF;
+$purple: #8C4B7E;
+$yellow: #F8BB44;
+$red: #F24B4B;
+$color-divs: $blue,
+$light-blue,
+$purple,
+$yellow,
+$red;
+$big-text: 3.5vw;
+$main-font: 'Lato',
+sans-serif;
+$translate1:translate3d(-100%,
+0,
+0);
+$translate2: translate3d(0,
+100%,
+0);
+$translate3:translate3d(0,
+-100%,
+0);
+$translate4:translate3d(0,
+100%,
+0);
+$translate5: translate3d(100%,
+0,
+0);
+$translates: $translate1,
+$translate2,
+$translate3,
+$translate4,
+$translate5;
+$animations: animation1,
+animation2,
+animation3,
+animation4,
+animation5;
